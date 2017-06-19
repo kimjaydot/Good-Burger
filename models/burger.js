@@ -20,7 +20,7 @@ var Burgers = sequelize.define("burgers", {
 Burgers.sync();
 
 // Makes the Book Model available for other files (will also create a table)
-module.exports = Burgers;
+module.exports = burgers;
 
 // var orm = require("../config/orm.js");
 
