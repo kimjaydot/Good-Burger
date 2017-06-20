@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     burger_name: DataTypes.STRING,
     devoured: DataTypes.BOOLEAN
   });
-  return Todo;
+  return Burgers;
 };
 
 // // Dependencies
