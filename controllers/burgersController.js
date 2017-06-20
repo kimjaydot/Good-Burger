@@ -39,7 +39,7 @@ module.exports = function(app) {
 
   // DELETE route for deleting todos. We can get the id of the todo to be deleted from
   // req.params.id
-  app.delete("/api/burgers/:id", function(req, res) {
+  app.delete("/burgers/:id", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.Burgers.destroy({
       where: {
@@ -52,12 +52,13 @@ module.exports = function(app) {
   });
 
   // PUT route for updating todos. We can get the updated todo data from req.body
-  app.put("burgers/update", function(req, res) {
+  app.put("/burgers/update", function(req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
+    //burger_name, devoured
     db.Burgers.update({
-      text: req.body.text,
-      complete: req.body.complete
+      burger_name: req.body.burger_name,
+      devoured: req.body.devoured
     }, {
       where: {
         id: req.body.id
