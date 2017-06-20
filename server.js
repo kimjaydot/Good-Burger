@@ -22,6 +22,14 @@ require("./controllers/burgersController.js")(app);
 // app.use("/create", routes);
 
 
-app.listen(PORT, function() {
-  console.log("Listening on port:%s", PORT);
+// app.listen(PORT, function() {
+//   console.log("Listening on port:%s", PORT);
+// });
+
+var db = require("./models");
+
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
