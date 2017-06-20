@@ -1,26 +1,38 @@
-// Dependencies
-// =============================================================
+module.exports = function(sequelize, DataTypes) {
+  var Burgers = sequelize.define("Burgers", {
+    burger_name: DataTypes.STRING,
+    devoured: DataTypes.BOOLEAN
+  });
+  return Todo;
+};
 
-// Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references my connection to the DB.
-var sequelize = require("../config/connection.js");
+// // Dependencies
+// // =============================================================
 
-// Creates a "Book" model that matches up with DB
-var Burgers = sequelize.define("burgers", {
-  burger_name: {
-    type: Sequelize.STRING
-  },
-  devoured: {
-    type: Sequelize.BOOLEAN
-  },
-});
+// // Sequelize (capital) references the standard library
+// var Sequelize = require("sequelize");
+// // sequelize (lowercase) references my connection to the DB.
+// var sequelize = require("../config/connection.js");
 
-// Syncs with DB
-Burgers.sync();
+// // Creates a "Book" model that matches up with DB
+// var Burgers = sequelize.define("burgers", {
+//   burger_name: {
+//     type: Sequelize.STRING
+//   },
+//   devoured: {
+//     type: Sequelize.BOOLEAN
+//   },
+// });
 
-// Makes the Book Model available for other files (will also create a table)
-module.exports = burgers;
+// // Syncs with DB
+// Burgers.sync();
+
+// // Makes the Book Model available for other files (will also create a table)
+// module.exports = burgers;
+
+
+
+
 
 // var orm = require("../config/orm.js");
 
