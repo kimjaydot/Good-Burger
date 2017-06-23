@@ -16,9 +16,13 @@ module.exports = function(app) {
   // GET route for getting all of the todos
   app.get("/", function(req, res) {
     // findAll returns all entries for a table when used with no options
+    console.log(db.Burgers);
     db.Burgers.findAll({}).then(function(dbBurgers) {
       // We have access to the todos as an argument inside of the callback function
-      res.json(dbBurgers);
+     //Use Render
+     console.log({dbBurgers})
+     res.render("index", {'burger_data': dbBurgers} );
+      // res.json(dbBurgers);
     });
   });
   // POST route for saving a new todo
@@ -33,7 +37,8 @@ module.exports = function(app) {
       devoured: req.body.devoured
     }).then(function(dbBurgers) {
       // We have access to the new todo as an argument inside of the callback function
-      res.json(dbBurgers);
+      // res.json(dbBurgers);
+       res.redirect("/");
     });
   });
 
