@@ -63,15 +63,15 @@ module.exports = function(app) {
     // we use where to describe which objects we want to update
     //burger_name, devoured
     db.Burgers.update({
-      burger_name: req.body.burger_name,
-      devoured: req.body.devoured
+      devoured: true
     }, {
       where: {
-        id: req.body.id
+        id: req.body.burger_id
       }
     }).then(function(dbBurgers) {
-      res.json(dbBurgers);
-      res.redirect("/");
+      // res.json(dbBurgers);
+       res.redirect("/");
+
     });
   });
 
