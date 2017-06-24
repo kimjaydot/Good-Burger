@@ -52,6 +52,7 @@ module.exports = function(app) {
       }
     }).then(function(dbBurgers) {
       res.json(dbBurgers);
+      res.redirect("/");
     });
 
   });
@@ -70,6 +71,7 @@ module.exports = function(app) {
       }
     }).then(function(dbBurgers) {
       res.json(dbBurgers);
+      res.redirect("/");
     });
   });
 
