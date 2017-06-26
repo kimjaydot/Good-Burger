@@ -7,4 +7,4 @@ Welcome to Eat-Da-Burger! Have you ever wanted to try Scorpion, Rabbit or Llama 
 
 
 # About Application
-This application was created with MySQL, Node, Express, Handlebars and Sequelize
+This application was created with MySQL, Node, Express, Handlebars and Sequelize.
