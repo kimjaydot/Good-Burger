@@ -1,6 +1,6 @@
-# sequelizedBurger
+# Good Burger
 
-Welcome to Eat-Da-Burger! Have you ever wanted to try Scorpion, Rabbit or Llama meat?! Well here's your chance! 
+>“Welcome to Good Burger, home of the good burger. Can I take your order?” – Ed
 
 ## How to use this Application
 
